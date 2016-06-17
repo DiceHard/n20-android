@@ -17,16 +17,17 @@ some invisible demon making you roll poorly, big data will expose him.
 =======================================================================
 
 System Architecture:
-
-Android App <=====\\         //=====> SQL DB  
-                   \\       //
-iOS App <===========>> API <<
-	           	     //       \\
-Web App <=========// 	       \\=====> Analytics
-
+```
+Android App <====\\         //====> SQL DB  
+                  \\       //
+iOS App <==========>> API <<
+                  //       \\
+Web App <========//         \\====> Analytics
+```
 ========================================================================
 
 Build Priorities:
+
 1. Android App
 	-All of the business logic, Physics Engine, UI, 
 	 and other useful/satisfying features will happen client side.
