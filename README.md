@@ -100,3 +100,19 @@ App stories: (VERY Mutable)
 	-Where I can manage battles and ongoing effects.
 	-Where I can display a r/t battle map on my player's devices,
 	 which they can change and interact with as well.
+
+=========================================================================
+
+Dice Physics iterations:
+
+1st iteration:		builtin random number generator
+
+2nd iteration:		Crypographically Secure Random
+
+3rd iteration:		CSR seeded from accelorometer
+
+4th iteration:		Open Source game Physics Engine
+
+5th iteration:		Custom Physics Engine Up and Running
+
+6th iteration:		speed-optimized Custom Physics Engine
