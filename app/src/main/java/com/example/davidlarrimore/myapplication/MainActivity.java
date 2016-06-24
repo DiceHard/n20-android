@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         Random r = new Random();
 
         TextView textView=(TextView) findViewById(R.id.textView2);
-        textView.setText(String.valueOf(r.nextInt(20)));
+        textView.setText(String.valueOf((r.nextInt(20)+1)));
     }
 
 
