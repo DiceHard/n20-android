@@ -12,6 +12,8 @@
     tools:context="com.example.davidlarrimore.myapplication.MainActivity"
     tools:showIn="@layout/activity_main">
 
+<!--exploratory code commented out before eventual deletion-->
+<!--
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -22,17 +24,19 @@
         android:layout_gravity="left"
         android:textColor="#4e3939"
         android:textSize="36dp" />
-
+-->
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Button"
+        android:text="@string/roll"
         android:id="@+id/button"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="139dp"
         android:onClick="buttonOnClick" />
 
+<!--exploratory code commented out before eventual deletion-->
+<!--
     <ToggleButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -44,7 +48,7 @@
         android:layout_marginTop="89dp"
         android:checked="false"
         android:onClick="toggleOnClick" />
-
+-->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

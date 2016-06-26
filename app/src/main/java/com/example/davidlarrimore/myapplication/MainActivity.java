@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         textView.setText(String.valueOf((r.nextInt(20)+1)));
     }
 
-
+/* //exploratory code commented out before eventual deletion
     public void toggleOnClick(View v) {
         ToggleButton toggleButton=(ToggleButton) v;
         TextView textView=(TextView) findViewById(R.id.textView);
@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
             textView.setText("Ian is Awesome!!!");
         }
     }
-
+*/
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
