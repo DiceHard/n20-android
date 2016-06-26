@@ -43,7 +43,7 @@ Build Priorities:
 
 =========================================================================
 
-App stories: (VERY Mutable)
+Android App Features: (VERY Mutable)
 		One thing at a time, 
 		maybe not all of this gets built, 
 		maybe some of this is for another app.
