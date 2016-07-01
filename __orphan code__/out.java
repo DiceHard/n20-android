@@ -20,7 +20,11 @@ class Die /* implements someInterface */ {
         double[] pointRA = [] //3d array of point coordinates
 			      //grouped by tripod/4pod/etc
 		//highest level maps to a sideRA index (1,2,3... 20)
-	int[] sideRA = [] //1d array that maps to pointRA    
+	int[] sideRA = [] //1d array that maps to pointRA
+			  //this might be simpler if we use index as the map
+
+	//constructor, and 
+	// method declarations    
     }
 
     class material { //This class will allow us to declare a material 
