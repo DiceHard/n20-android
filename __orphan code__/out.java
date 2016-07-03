@@ -7,33 +7,46 @@
  */
 
 class Die /* implements someInterface */ {
- 
-    double radius; //from geometrical center to farthest point coordinate.
-		   //used to get dice size for spin & medium resistance
-    double[] gravctr = [] //random. Has slight variation from geoctr.
 
-    class geometry { //This class will allow us to declare a shape
+    //from geometrical center to farthest point coordinate.
+    //used to get dice size for spin & medium resistance
+    private double radius;
+    //random. Has slight variation from geoctr.
+    private double[] gravctr = [] 
+    class Geometry { //This class will allow us to declare a shape
 		     //and then inject it into the die object 
-	int sides,
+	private int sides,
 		//star superstructure: points connect to gravctr.
-        double[] geoctr = [0,0,0] //3 point coordiates: lat, lon, altitude
-        double[] pointRA = [] //3d array of point coordinates
-			      //grouped by tripod/4pod/etc
+ 	//3 point coordiates: lattitude, longitude, altitude
+        private double[] geoCtr = {0,0,0}
+        private double[] pointRA = {} //3d array of point coordinates
+				      //grouped by tripod/4pod/etc
 		//highest level maps to a sideRA index (1,2,3... 20)
-	int[] sideRA = [] //1d array that maps to pointRA
-			  //this might be simpler if we use index as the map
+	private int[] sideRA = {} //1d array that maps to pointRA
+			  //this might be simpler if we use index as the map			      //or if we use a dictionary instead of an array.
 
-	//constructor, and 
+	//constructor (So you now what this spaghetti is supposet to be :P)
+	public Geometry(int sides, double[] pointRA, int[] sideRA) {
+	    sides = sides;
+	    pointRA = pointRA;
+	    sideRA = sideRA;
+	    geoCtr = {0,0,0}; //Is this necessary to declare?
+	}
 	// method declarations    
     }
 
-    class material { //This class will allow us to declare a material 
+    class Material { //This class will allow us to declare a material 
 		     //and then inject it into the die object.
-	double density; //To calculate mass
-	double friction; //To calculate friction coeficient
-	double elasticity; //To calculate bounce
+	private double density; //To calculate mass
+	private double friction; //To calculate friction coeficient
+	private double elasticity; //To calculate bounce
 
-	//constructor, and 
+	//constructor (So you now what this spaghetti is supposet to be :P)
+	public Material(double density, double friction, double elasticity) {
+	    density = density;
+	    friction = friction;
+	    elasticity = elasticity;
+	} 
 	// method declarations
 
     }
@@ -41,6 +54,13 @@ class Die /* implements someInterface */ {
     
     //constructor, -> instantiate with Radius, Geometry, and Material
 					//gravctr randomly generated
+    public Die(double radius, class Geometry, class Material) { //can you pass a class as an arg into a constructor?
+	gravCtr = {0,0,0}//for now. 
+			 //Eventually invoke random to make tiny flaws.
+	radius = radius;
+	Geometry = Geometry;
+	Material = Material;
+    }
 
 
     // method declarations
