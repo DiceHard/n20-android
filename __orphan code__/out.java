@@ -32,7 +32,16 @@ class Die /* implements someInterface */ {
 	    sideRA = sideRA;
 	    geoCtr = {0,0,0}; //Is this necessary to declare?
 	}
-	// method declarations    
+	// method declarations   
+	public int getSides() { return sides; }
+	public double[] getGeoCtr() { return geoCtr; } 
+	public double[] getPointRA() { return pointRA; }
+	public int[] getSideRA() { return sideRA; }
+	public double[] setPointRA(sideFacing) {
+		//modulate the pointRA to simulate manual rotation
+		//see issue #3 for story; 
+		//see issue #2 for explanation of die geometry;
+	}
     }
 
     class Material { //This class will allow us to declare a material 
@@ -48,7 +57,9 @@ class Die /* implements someInterface */ {
 	    elasticity = elasticity;
 	} 
 	// method declarations
-
+	public double getDensity() { return density; }
+	public double getFriction() { return friction; }
+	public double getElasticity() { return elasticity; }
     }
     
     
