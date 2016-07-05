@@ -39,14 +39,16 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+    public int wtnDice() {
+        Random r = new Random();
+        int sides = 20;
+        return r.nextInt(sides) +1;
+    }
 
     public void buttonOnClick(View v) {
-        //Button button=(Button) v;
-        //((Button) v).setText("clicked");
-        Random r = new Random();
 
         TextView textView=(TextView) findViewById(R.id.textView2);
-        textView.setText(String.valueOf((r.nextInt(20)+1)));
+        textView.setText(String.valueOf(wtnDice()));
     }
 
 /* //exploratory code commented out before eventual deletion
