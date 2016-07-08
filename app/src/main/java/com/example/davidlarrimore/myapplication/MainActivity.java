@@ -38,17 +38,17 @@ public class MainActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
-
+/*
     public int wtnDice() {
         Random r = new Random();
         int sides = 20;
         return r.nextInt(sides) +1;
     }
-
+*/
     public void buttonOnClick(View v) {
 
         TextView textView=(TextView) findViewById(R.id.textView2);
-        textView.setText(String.valueOf(wtnDice()));
+        textView.setText(String.valueOf(Die.roll()));
     }
 
 /* //exploratory code commented out before eventual deletion
