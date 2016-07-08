@@ -31,12 +31,11 @@
         android:text="Roll 6"
         android:id="@+id/roll6"
         android:onClick="D6buttonOnClick"
-        android:layout_below="@+id/textView2"
-        android:layout_toLeftOf="@+id/roll20"
-        android:layout_toStartOf="@+id/roll20"
-        android:layout_marginRight="41dp"
-        android:layout_marginEnd="41dp"
-        android:layout_marginTop="89dp" />
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="75dp"
+        android:layout_marginRight="75dp"
+        android:layout_marginLeft="75dp"
+        android:layout_marginTop="350dp" />
 
 <!--exploratory code commented out before eventual deletion-->
 <!--
@@ -67,10 +66,10 @@
         android:text="Roll 20"
         android:id="@+id/roll20"
         android:onClick="D20buttonOnClick"
-        android:layout_alignTop="@+id/roll6"
-        android:layout_toRightOf="@+id/textView2"
-        android:layout_toEndOf="@+id/textView2"
-        android:layout_marginLeft="41dp"
-        android:layout_marginStart="41dp" />
+        android:layout_marginStart="200dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="350dp" />
 
 </RelativeLayout>
