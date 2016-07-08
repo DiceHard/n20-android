@@ -15,16 +15,20 @@ public class Die {
     }
 
     public int getSides() {
-        return sides;
+        return this.sides;
     }
 
     public void setSides(int sides) {
         this.sides = sides;
     }
 
-    public static int roll() {
+    public int roll() {
         Random r = new Random();
-        int sides = 20;
+        return r.nextInt(this.getSides()) +1;
+    }
+
+    public static int roll(int sides) {
+        Random r = new Random();
         return r.nextInt(sides) +1;
     }
 

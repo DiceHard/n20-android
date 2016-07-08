@@ -11,6 +11,10 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.ToggleButton;
+
+import com.example.davidlarrimore.myapplication.com.example.davidlarrimore.myapplication.die.D20;
+import com.example.davidlarrimore.myapplication.com.example.davidlarrimore.myapplication.die.D6;
+
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
@@ -45,12 +49,19 @@ public class MainActivity extends AppCompatActivity {
         return r.nextInt(sides) +1;
     }
 */
-    public void buttonOnClick(View v) {
-
+    public void buttonOnClick(View v, int roll) {
         TextView textView=(TextView) findViewById(R.id.textView2);
-        textView.setText(String.valueOf(Die.roll()));
+        textView.setText(String.valueOf(roll));
     }
 
+
+    public void D20buttonOnClick(View v) {
+        buttonOnClick(v, new D20().roll());
+    }
+
+    public void D6buttonOnClick(View v) {
+        buttonOnClick(v, new D6().roll());
+    }
 /* //exploratory code commented out before eventual deletion
     public void toggleOnClick(View v) {
         ToggleButton toggleButton=(ToggleButton) v;

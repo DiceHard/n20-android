@@ -28,12 +28,15 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/roll"
-        android:id="@+id/button"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="139dp"
-        android:onClick="buttonOnClick" />
+        android:text="Roll 6"
+        android:id="@+id/roll6"
+        android:onClick="D6buttonOnClick"
+        android:layout_below="@+id/textView2"
+        android:layout_toLeftOf="@+id/roll20"
+        android:layout_toStartOf="@+id/roll20"
+        android:layout_marginRight="41dp"
+        android:layout_marginEnd="41dp"
+        android:layout_marginTop="89dp" />
 
 <!--exploratory code commented out before eventual deletion-->
 <!--
@@ -57,5 +60,17 @@
         android:id="@+id/textView2"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Roll 20"
+        android:id="@+id/roll20"
+        android:onClick="D20buttonOnClick"
+        android:layout_alignTop="@+id/roll6"
+        android:layout_toRightOf="@+id/textView2"
+        android:layout_toEndOf="@+id/textView2"
+        android:layout_marginLeft="41dp"
+        android:layout_marginStart="41dp" />
 
 </RelativeLayout>
