@@ -5,9 +5,9 @@ import com.example.davidlarrimore.myapplication.Die;
 /**
  * Created by David Larrimore on 7/7/2016.
  */
-public class D6 extends Die{
+public class D20 extends Die{
 
-    public D6() {
-        this.setSides(6);
+    public D20() {
+        this.setSides(20);
     }
 }

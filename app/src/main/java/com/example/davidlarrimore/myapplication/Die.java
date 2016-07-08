@@ -9,7 +9,17 @@ public class Die {
     /**
      * Generic Constructor
      */
+    private int sides = 0;
+
     public Die() {
+    }
+
+    public int getSides() {
+        return sides;
+    }
+
+    public void setSides(int sides) {
+        this.sides = sides;
     }
 
     public static int roll() {
@@ -17,4 +27,5 @@ public class Die {
         int sides = 20;
         return r.nextInt(sides) +1;
     }
+
 }
