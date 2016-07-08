@@ -6,6 +6,12 @@ import java.util.Random;
  */
 public class Die {
 
+    /**
+     * Generic Constructor
+     */
+    public Die() {
+    }
+
     public static int roll() {
         Random r = new Random();
         int sides = 20;
