@@ -15,7 +15,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Roll 6"
+        android:text="@string/roll6"
         android:id="@+id/roll6"
         android:onClick="D6buttonOnClick"
         android:layout_marginStart="50dp"
@@ -36,7 +36,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Roll 20"
+        android:text="@string/roll20"
         android:id="@+id/roll20"
         android:onClick="D20buttonOnClick"
         android:layout_marginStart="200dp"

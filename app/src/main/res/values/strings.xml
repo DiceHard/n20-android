@@ -2,4 +2,6 @@
     <string name="app_name">My Application</string>
     <string name="action_settings">Settings</string>
     <string name="roll">Roll</string>
+    <string name="roll20">Roll d20</string>
+    <string name="roll6">Roll d6</string>
 </resources>
