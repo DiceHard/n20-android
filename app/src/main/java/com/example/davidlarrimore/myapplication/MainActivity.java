@@ -8,9 +8,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Button;
 import android.widget.TextView;
-import android.widget.ToggleButton;
+
 
 import com.example.davidlarrimore.myapplication.com.example.davidlarrimore.myapplication.die.D20;
 import com.example.davidlarrimore.myapplication.com.example.davidlarrimore.myapplication.die.D6;
@@ -42,13 +41,7 @@ public class MainActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
-/*
-    public int wtnDice() {
-        Random r = new Random();
-        int sides = 20;
-        return r.nextInt(sides) +1;
-    }
-*/
+
     public void buttonOnClick(View v, int roll) {
         TextView textView=(TextView) findViewById(R.id.textView2);
         textView.setText(String.valueOf(roll));
@@ -62,17 +55,7 @@ public class MainActivity extends AppCompatActivity {
     public void D6buttonOnClick(View v) {
         buttonOnClick(v, new D6().roll());
     }
-/* //exploratory code commented out before eventual deletion
-    public void toggleOnClick(View v) {
-        ToggleButton toggleButton=(ToggleButton) v;
-        TextView textView=(TextView) findViewById(R.id.textView);
-        if (toggleButton.isChecked()){
-            textView.setText("Ian Sucks!!!!!");
-       }else{
-            textView.setText("Ian is Awesome!!!");
-        }
-    }
-*/
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will

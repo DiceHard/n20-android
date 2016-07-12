@@ -12,19 +12,6 @@
     tools:context="com.example.davidlarrimore.myapplication.MainActivity"
     tools:showIn="@layout/activity_main">
 
-<!--exploratory code commented out before eventual deletion-->
-<!--
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/open"
-        android:id="@+id/textView"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_gravity="left"
-        android:textColor="#4e3939"
-        android:textSize="36dp" />
--->
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -37,20 +24,6 @@
         android:layout_marginLeft="75dp"
         android:layout_marginTop="350dp" />
 
-<!--exploratory code commented out before eventual deletion-->
-<!--
-    <ToggleButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New ToggleButton"
-        android:id="@+id/toggleButton"
-        android:layout_below="@+id/textView"
-        android:layout_alignLeft="@+id/button"
-        android:layout_alignStart="@+id/button"
-        android:layout_marginTop="89dp"
-        android:checked="false"
-        android:onClick="toggleOnClick" />
--->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

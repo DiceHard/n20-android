@@ -1,8 +1,5 @@
 <resources>
     <string name="app_name">My Application</string>
     <string name="action_settings">Settings</string>
-<!--exploratory code commented out before eventual deletion-->
-<!--<string name="open">Ian is Awesome!!!</string>
-    <string name="closed">Ian Sucks!!!!</string>-->
     <string name="roll">Roll</string>
 </resources>
