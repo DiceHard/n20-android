@@ -12,37 +12,41 @@
     tools:context="com.example.davidlarrimore.myapplication.MainActivity"
     tools:showIn="@layout/activity_main">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/roll6"
-        android:id="@+id/roll6"
-        android:onClick="D6buttonOnClick"
-        android:layout_marginStart="50dp"
-        android:layout_marginEnd="75dp"
-        android:layout_marginRight="75dp"
-        android:layout_marginLeft="75dp"
-        android:layout_marginTop="350dp" />
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text=""
         android:id="@+id/textView2"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="false"
+        android:layout_marginLeft="175dp"
+        android:layout_marginTop="75dp"
+        android:textSize="50dp"
+        android:textIsSelectable="true"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="50dp" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/roll20"
+        android:text="@string/roll"
         android:id="@+id/roll20"
         android:onClick="D20buttonOnClick"
-        android:layout_marginStart="200dp"
-        android:layout_marginEnd="25dp"
-        android:layout_marginRight="25dp"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="350dp" />
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:clickable="true"
+        android:enabled="true"
+        style="@style/Base.Widget.AppCompat.Button.Colored"
+        android:height="200dp"
+        android:width="200dp"
+        android:textSize="20dp"
+        android:theme="@style/Theme.AppCompat" />
 
 </RelativeLayout>

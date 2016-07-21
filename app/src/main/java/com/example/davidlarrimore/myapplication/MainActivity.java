@@ -17,6 +17,8 @@ import com.example.davidlarrimore.myapplication.com.example.davidlarrimore.myapp
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
+    //DIE OBJECT CREATED TO RESOLVE ISSUE#3 (https://github.com/DiceHard/n20-android/issues/3)
+    public static Die die = new D20();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +35,9 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        TextView textView=(TextView) findViewById(R.id.textView2);
+        textView.setText(String.valueOf(die.getRoll()));
     }
 
     @Override
@@ -49,11 +54,8 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void D20buttonOnClick(View v) {
-        buttonOnClick(v, new D20().roll());
-    }
-
-    public void D6buttonOnClick(View v) {
-        buttonOnClick(v, new D6().roll());
+        //buttonOnClick(v, new D20().roll());
+        buttonOnClick(v, die.roll());
     }
 
     @Override
