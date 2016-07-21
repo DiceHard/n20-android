@@ -22,7 +22,7 @@
         android:layout_alignParentLeft="false"
         android:layout_marginLeft="175dp"
         android:layout_marginTop="75dp"
-        android:textSize="50dp"
+        android:textSize="40dp"
         android:textIsSelectable="true"
         android:textStyle="bold"
         android:textAlignment="center"

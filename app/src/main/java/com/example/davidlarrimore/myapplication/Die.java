@@ -45,31 +45,39 @@ public class Die {
     public Die() {
     }
 
+    /**
+     * Generic Constructor
+     */
+    public Die(int sides) {
+        this.setSides(sides);
+    }
 
     public int roll() {
         Random r = new Random();
         return r.nextInt(this.getSides()) +1;
     }
 
-    public static int roll(int sides) {
-        Random r = new Random();
-        return r.nextInt(sides) +1;
-    }
-
     //METHOD CREATED TO RESOLVE ISSUE#3 (https://github.com/DiceHard/n20-android/issues/3)
-    public static int roll(int sides, int offset) {
+    public int roll(int offset) {
         Random r = new Random();
-        int roll = r.nextInt(sides)+1;
+        int roll = r.nextInt(this.getSides())+1;
         int thisRoll;
 
         //If the modulus is less than 1, it means that the total was less than sides and that is what is used.
         //If the modulus is 1 or higher, it means that the total was more than sides and the modulus is used.
-        if ((roll+offset)%sides < 1){
-            thisRoll = roll;
+        if ((roll+offset)%this.getSides() < 1){
+            return roll;
         }else{
-            thisRoll = (roll+offset)%sides;
+            return (roll+offset)%this.getSides();
         }
+    }
 
-        return thisRoll;
+    //Method created to support Issue #4. As user swipes, we increment roll by one.
+    public void increment() {
+        if (this.getRoll()+1 > this.getSides()){
+            this.setSides(1);
+        }else{
+            this.setSides(this.getRoll()+1);
+        }
     }
 }

@@ -11,4 +11,6 @@ public class D20 extends Die{
         this.setSides(20);
         this.setRoll(this.roll(this.getSides()));
     }
+
+
 }
