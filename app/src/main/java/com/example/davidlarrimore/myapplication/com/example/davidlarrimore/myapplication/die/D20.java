@@ -8,8 +8,8 @@ import com.example.davidlarrimore.myapplication.Die;
 public class D20 extends Die{
 
     public D20() {
+        super();
         this.setSides(20);
-        this.setRoll(this.roll(this.getSides()));
     }
 
 

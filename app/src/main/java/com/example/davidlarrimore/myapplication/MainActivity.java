@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
         //Setting default first roll
         TextView textView=(TextView) findViewById(R.id.textView2);
+        die.roll();
         textView.setText(String.valueOf(die.getRoll()));
 
         //Getting Screen Resolution
@@ -58,17 +59,10 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-    public void buttonOnClick(View v, int roll) {
+    public void rollButton(View v) {
         TextView textView=(TextView) findViewById(R.id.textView2);
-        textView.setText(String.valueOf(roll));
+        textView.setText(String.valueOf(die.roll()));
     }
-
-
-    public void D20buttonOnClick(View v) {
-        //buttonOnClick(v, new D20().roll());
-        buttonOnClick(v, die.roll());
-    }
-
 
     // This example shows an Activity, but you would use the same approach if
     // you were subclassing a View.
