@@ -75,9 +75,9 @@ public class Die {
     //Method created to support Issue #4. As user swipes, we increment roll by one.
     public void increment() {
         if (this.getRoll()+1 > this.getSides()){
-            this.setSides(1);
+            this.setRoll(1);
         }else{
-            this.setSides(this.getRoll()+1);
+            this.setRoll(this.getRoll()+1);
         }
     }
 }
