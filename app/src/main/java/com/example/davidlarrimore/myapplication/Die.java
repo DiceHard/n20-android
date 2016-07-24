@@ -30,12 +30,20 @@ public class Die {
         this.weight = weight;
     }
 
+    public int getOffset() {
+        return offset;
+    }
 
-    private int sides = 0;
+    public void setOffset(int offset) {
+        this.offset = offset;
+    }
+
+    private int offset = 0;
+    private int sides = 1;
     private int weight = 0;
 
     //TODO: Eventually replace this with a "Roll" object array that captures all relevent roll info
-    private int roll = 0;
+    private int roll = 1;
 
 
 
@@ -50,34 +58,63 @@ public class Die {
      */
     public Die(int sides) {
         this.setSides(sides);
-    }
+}
 
+    //METHOD CREATED TO RESOLVE ISSUE#3 (https://github.com/DiceHard/n20-android/issues/3)
     public int roll() {
         Random r = new Random();
-        return r.nextInt(this.getSides()) +1;
+        int roll = r.nextInt(this.getSides()) +1;
+
+        //If the modulus is >= 1, it means that the total was more than sides and the modulus is used and we need to wrap around
+        if(this.offset != 0){
+            if ((roll+this.offset)%this.getSides() >= 1){
+                roll = (roll+this.offset)%this.getSides();
+
+            }
+        }
+
+        this.setRoll(roll);
+        this.setOffset(roll);
+        return roll;
     }
 
     //METHOD CREATED TO RESOLVE ISSUE#3 (https://github.com/DiceHard/n20-android/issues/3)
-    public int roll(int offset) {
+    public int roll(boolean offset) {
         Random r = new Random();
-        int roll = r.nextInt(this.getSides())+1;
-        int thisRoll;
+        int roll = r.nextInt(this.getSides()) +1;
 
-        //If the modulus is less than 1, it means that the total was less than sides and that is what is used.
-        //If the modulus is 1 or higher, it means that the total was more than sides and the modulus is used.
-        if ((roll+offset)%this.getSides() < 1){
-            return roll;
-        }else{
-            return (roll+offset)%this.getSides();
+        //If the modulus is >= 1, it means that the total was more than sides and the modulus is used and we need to wrap around
+        if(this.offset != 0 && offset){
+            if ((roll+this.offset)%this.getSides() >= 1){
+                roll = (roll+this.offset)%this.getSides();
+            }
         }
+
+        this.setRoll(roll);
+        this.setOffset(roll);
+        return roll;
     }
+
 
     //Method created to support Issue #4. As user swipes, we increment roll by one.
     public void increment() {
         if (this.getRoll()+1 > this.getSides()){
             this.setRoll(1);
+            this.setOffset(1);
         }else{
             this.setRoll(this.getRoll()+1);
+            this.setOffset(this.getRoll()+1);
+        }
+    }
+
+    //Method created to support Issue #4. As user swipes, we increment roll by one.
+    public void decrement() {
+        if (this.getRoll()-1 < 1){
+            this.setRoll(this.getSides());
+            this.setOffset(this.getSides());
+        }else{
+            this.setRoll(this.getRoll()-1);
+            this.setOffset(this.getRoll()-1);
         }
     }
 }
