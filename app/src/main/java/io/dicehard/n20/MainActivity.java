@@ -1,4 +1,4 @@
-package com.example.davidlarrimore.myapplication;
+package io.dicehard.n20;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -15,8 +15,8 @@ import android.util.Log;
 import android.graphics.Point;
 import android.view.Display;
 
-import com.example.davidlarrimore.myapplication.com.example.davidlarrimore.myapplication.die.D20;
-import com.example.davidlarrimore.myapplication.com.example.davidlarrimore.myapplication.die.D6;
+import io.dicehard.n20.die.D20;
+import io.dicehard.n20.die.D6;
 
 import java.util.Random;
 

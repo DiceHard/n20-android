@@ -1,7 +1,6 @@
-package com.example.davidlarrimore.myapplication.com.example.davidlarrimore.myapplication.die;
+package io.dicehard.n20.die;
 
-import com.example.davidlarrimore.myapplication.Die;
-
+import io.dicehard.n20.Die;
 /**
  * Created by David Larrimore on 7/7/2016.
  */

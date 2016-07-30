@@ -1,4 +1,4 @@
-package com.example.davidlarrimore.myapplication;
+package io.dicehard.n20;
 
 import org.junit.Test;
 

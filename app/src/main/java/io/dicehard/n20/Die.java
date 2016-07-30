@@ -1,4 +1,4 @@
-package com.example.davidlarrimore.myapplication;
+package io.dicehard.n20;
 
 import java.util.Random;
 /**
@@ -58,7 +58,7 @@ public class Die {
      */
     public Die(int sides) {
         this.setSides(sides);
-}
+    }
 
     //METHOD CREATED TO RESOLVE ISSUE#3 (https://github.com/DiceHard/n20-android/issues/3)
     public int roll() {
